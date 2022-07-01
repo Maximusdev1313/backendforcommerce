@@ -1,18 +1,20 @@
 
+from asyncore import read
 from rest_framework import serializers
 from .models import *
 
-
+class ProductRasmiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductRasmi
+        fields = ['id', 'title', 'file_field', 'rasmlari']
 class ProductSerializer(serializers.ModelSerializer):
+    rasmlari = ProductRasmiSerializer(many= True, read_only=True)
     class Meta: 
         model = Product
         fields = ['id', 'nomi', 'kilogramm', 'litri', 'soni', 'narx', 'chegirma_narx', 'chegirma_foizi',  'mahsulot', 'rasmlari']
     def __str__(self):
         return self.nomi
-class ProductRasmiSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProductRasmi
-        fields = ['id', 'title', 'file_field', 'rasmlari']
+
 
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
