@@ -10,6 +10,10 @@ class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
+class ProductRasmiViewSet(ModelViewSet):
+    queryset = Rasmi.objects.all()
+    serializer_class = ProductRasmiSerializer
+
 class CategoryViewSet(ModelViewSet):
     queryset = Categoriya.objects.all()
     serializer_class = CategorySerializer

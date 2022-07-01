@@ -7,13 +7,13 @@ from .models import *
 class ProductSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Product
-        fields = ['id', 'nomi', 'kilogramm', 'litri', 'soni', 'narx', 'chegirma_narx', 'chegirma_foizi',  'mahsulot']
+        fields = ['id', 'nomi', 'kilogramm', 'litri', 'soni', 'narx', 'chegirma_narx', 'chegirma_foizi',  'mahsulot', 'rasmlari']
     def __str__(self):
         return self.nomi
 class ProductRasmiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rasmi
-        fields = '__all__'
+        fields = ['id', 'title', 'file_field', 'rasmlari']
 
 class FileSerializer(serializers.ModelSerializer):
     class Meta:

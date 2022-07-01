@@ -17,7 +17,7 @@ class Product(models.Model):
 class Rasmi(models.Model):
     file_field = models.FileField(blank=True, null=True)
     title = models.CharField(max_length=2500, null=True)
-    rasmlar = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='rasmlari')
+    rasmlari = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='rasmlari')
     def __str__(self):
         return self.title
 

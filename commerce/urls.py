@@ -8,6 +8,7 @@ router = routers.DefaultRouter()
 router.register('categoriya', CategoryViewSet)
 router.register('rasmlar', RasmViewSet)
 router.register('productlar', ProductViewSet)
+router.register('productRasmlari', ProductRasmiViewSet)
 urlpatterns = [
     path('', include(router.urls) ),
     # url(r'^users/(?P<username>[a-zA-Z0-9]+)$', CategoryViewSet.as_view({'get': 'retrieve'})),
