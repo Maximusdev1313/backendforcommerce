@@ -5,4 +5,4 @@ from .models import *
 admin.site.register(Categoriya)
 admin.site.register(Rasm)
 admin.site.register(Product)
-admin.site.register(Rasmi)
+admin.site.register(ProductRasmi)

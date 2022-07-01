@@ -11,7 +11,7 @@ class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
 
 class ProductRasmiViewSet(ModelViewSet):
-    queryset = Rasmi.objects.all()
+    queryset = ProductRasmi.objects.all()
     serializer_class = ProductRasmiSerializer
 
 class CategoryViewSet(ModelViewSet):

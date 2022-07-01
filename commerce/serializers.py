@@ -1,5 +1,4 @@
-from asyncore import read
-from dataclasses import field
+
 from rest_framework import serializers
 from .models import *
 
@@ -12,7 +11,7 @@ class ProductSerializer(serializers.ModelSerializer):
         return self.nomi
 class ProductRasmiSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Rasmi
+        model = ProductRasmi
         fields = ['id', 'title', 'file_field', 'rasmlari']
 
 class FileSerializer(serializers.ModelSerializer):
