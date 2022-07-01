@@ -1,17 +1,19 @@
+from tkinter.tix import Tree
 from django.db import models
 from django.utils.text import slugify
 
 class Product(models.Model):
     nomi = models.CharField(max_length=100)
-    kilogramm = models.IntegerField(max_length=64, null=True)
-    litri = models.IntegerField(max_length=64, null=True)
-    soni = models.IntegerField(max_length=64, null=True)
-    narx = models.IntegerField(max_length=64 )
-    chegirma_narx = models.CharField(max_length=100000, null=True)
-    chegirma_foizi = models.CharField(max_length=10, null=True)
-    categoriya = models.ForeignKey('Categoriya', on_delete=models.CASCADE, related_name='categoriya')
+    kilogramm = models.IntegerField( null=True, blank=True)
+    litri = models.IntegerField( null=True, blank=True)
+    soni = models.IntegerField( null=True, blank=True)
+    narx = models.IntegerField( )
+    chegirma_narx = models.CharField(max_length=64, null=True, blank=True)
+    chegirma_foizi = models.CharField(max_length=10, null=True, blank=True)
+    mahsulot = models.ForeignKey('Categoriya', on_delete=models.CASCADE, related_name='mahsulot')
 
-
+    def __str__(self):
+        return self.nomi
 class Rasmi(models.Model):
     file_field = models.FileField(blank=True, null=True)
     title = models.CharField(max_length=2500, null=True)
@@ -19,8 +21,7 @@ class Rasmi(models.Model):
     def __str__(self):
         return self.title
 
-    def __str__(self):
-        return self.nomi
+
 class Categoriya(models.Model):
     categoriya_nomi = models.CharField(max_length=200)
     
