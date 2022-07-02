@@ -18,7 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Rasm
+        model = CategoriyaRasm
         fields = ['id', 'file_field', 'title', 'rasmlar']
 
 

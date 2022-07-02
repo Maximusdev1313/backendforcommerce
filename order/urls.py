@@ -6,8 +6,8 @@ from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 
-router.register('buyurtma', UserViewSet)
-
+router.register('user', UserViewSet)
+router.register('orders', OrderViewSet)
 urlpatterns = [
     path('', include(router.urls) ),
     

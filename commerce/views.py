@@ -19,5 +19,5 @@ class CategoryViewSet(ModelViewSet):
     serializer_class = CategorySerializer
 
 class RasmViewSet(ModelViewSet):
-    queryset = Rasm.objects.all()
+    queryset = CategoriyaRasm.objects.all()
     serializer_class = FileSerializer
