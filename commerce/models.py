@@ -15,7 +15,7 @@ class Product(models.Model):
     def __str__(self):
         return self.nomi
 class ProductRasmi(models.Model):
-    file_field = models.FileField(blank=True, null=True)
+    link = models.CharField(max_length=500)
     title = models.CharField(max_length=2500, null=True)
     rasmlari = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='rasmlari')
     def __str__(self):
@@ -28,7 +28,7 @@ class Categoriya(models.Model):
     def __str__(self):
         return self.categoriya_nomi  
 class CategoriyaRasm(models.Model):
-    file_field = models.FileField(blank=True, null=True)
+    link = models.CharField(max_length=500)
     title = models.CharField(max_length=2500, null=True)
     rasmlar = models.ForeignKey('Categoriya', on_delete=models.CASCADE, related_name='rasmlar')
     def __str__(self):

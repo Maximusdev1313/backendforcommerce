@@ -6,7 +6,7 @@ from .models import *
 class ProductRasmiSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductRasmi
-        fields = ['id', 'title', 'file_field', 'rasmlari']
+        fields = ['id', 'title', 'link', 'rasmlari']
 class ProductSerializer(serializers.ModelSerializer):
     rasmlari = ProductRasmiSerializer(many= True, read_only=True)
     class Meta: 
@@ -19,7 +19,7 @@ class ProductSerializer(serializers.ModelSerializer):
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CategoriyaRasm
-        fields = ['id', 'file_field', 'title', 'rasmlar']
+        fields = ['id', 'link', 'title', 'rasmlar']
 
 
 class CategorySerializer(serializers.ModelSerializer):
