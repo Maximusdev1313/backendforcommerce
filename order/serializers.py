@@ -13,4 +13,4 @@ class UserSerializer(serializers.ModelSerializer):
     orderForUser = OrderSerializer(many=True, read_only=True)
     class Meta:
         model = User
-        fields = ['id', 'userName', 'phoneNumber', 'address', 'orderForUser']
+        fields = ['id', 'userName', 'phoneNumber', 'address', 'comment' 'orderForUser']

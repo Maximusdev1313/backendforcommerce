@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 router = routers.DefaultRouter()
 
 router.register('report', ReportViewSet)
-
+router.register('score', ScoreViewSet)
 urlpatterns = [
     path('', include(router.urls) ),
     

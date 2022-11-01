@@ -5,5 +5,9 @@ from .models import *
 from rest_framework.viewsets import ModelViewSet
 
 class ReportViewSet(ModelViewSet):
-    queryset = Report.objects.all()
-    serializer_class = ReportSerializer
+    queryset = ProductList.objects.all()
+    serializer_class = ProductListSerializer
+
+class ScoreViewSet(ModelViewSet):
+    queryset = Score.objects.all()
+    serializer_class = ScoreSerializer

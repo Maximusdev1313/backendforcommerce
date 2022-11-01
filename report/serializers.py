@@ -3,7 +3,12 @@ from .models import *
 
 from rest_framework import serializers
 
-class ReportSerializer(serializers.ModelSerializer):
+class ProductListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Report
+        model = ProductList
+        fields = '__all__'
+
+class ScoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Score
         fields = '__all__'

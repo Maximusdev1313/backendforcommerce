@@ -7,6 +7,7 @@ class User(models.Model):
     phoneNumber = models.IntegerField()
     address = models.CharField(max_length=100)
     total = models.IntegerField()
+    comment = models.TextField(max_length = 300, blank=True, null=True)
     ready = models.CharField(max_length=50)
     def __str__(self):
         return self.userName
