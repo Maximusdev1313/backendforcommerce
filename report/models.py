@@ -7,8 +7,9 @@ class ProductList(models.Model):
     weight = models.FloatField(blank=True, null=True)
     quantity = models.FloatField(blank=True, null=True)
     litr  = models.FloatField(blank=True, null=True)
-    summa = models.FloatField()
-    totalSumma = models.FloatField()
+    price = models.FloatField()
+    total_price = models.FloatField()
+    residue = models.FloatField(null=True, blank=True)
     def __str__(self):
         return self.product_name
 

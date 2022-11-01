@@ -4,7 +4,7 @@ from .serializers import *
 from .models import *
 from rest_framework.viewsets import ModelViewSet
 
-class ReportViewSet(ModelViewSet):
+class ProductListViewSet(ModelViewSet):
     queryset = ProductList.objects.all()
     serializer_class = ProductListSerializer
 
