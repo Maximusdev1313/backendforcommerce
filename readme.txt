@@ -7,3 +7,4 @@
 2. report -- hisobot bo'limi
 
     /product-list/ -- barcha mahsulotlar haqida ma'lumot
+    /score/ -- bir oylik hisob-kitoblar to'plami || hisobot
