@@ -10,6 +10,7 @@ class Product(models.Model):
     narx = models.TextField()
     chegirma_narx = models.TextField(max_length=64, null=True, blank=True)
     chegirma_foizi = models.TextField(max_length=10, null=True, blank=True)
+    time = models.DateTimeField(auto_now_add=True, )
     mahsulot = models.ForeignKey('Categoriya', on_delete=models.CASCADE, related_name='mahsulot')
 
     def __str__(self):

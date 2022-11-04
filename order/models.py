@@ -1,5 +1,9 @@
 
+from email.policy import default
+from time import time
 from django.db import models
+# from pytz import timezone
+from django.utils import timezone
 # Create your models here.
 
 class User(models.Model):
@@ -8,6 +12,7 @@ class User(models.Model):
     address = models.TextField(max_length=100, null=True, blank=True)
     total = models.TextField(null=True, blank=True)
     comment = models.TextField(max_length = 300, blank=True, null=True)
+    time = models.DateTimeField(auto_now_add=True, )
     ready = models.TextField(max_length=50, null=True, blank=True)
     def __str__(self):
         return self.userName

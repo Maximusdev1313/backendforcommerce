@@ -14,6 +14,7 @@ class ProductList(models.Model):
         return self.product_name
 
 class Score(models.Model):
+    time = models.DateTimeField(auto_now_add=True)
     # bir oylik buyurtmalar soni 
     orders = models.TextField(null=True, blank=True) 
     # aylanma mablag'  
@@ -35,6 +36,8 @@ class Score(models.Model):
 
     # o'tgan oygi foyda
     lastProfit = models.TextField(null=True, blank=True)
-
+    # userlar soni
+    users = models.TextField(null=True, blank=True)
+    
     def __str__(self):
         return self.working_kapital
