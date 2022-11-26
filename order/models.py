@@ -10,6 +10,7 @@ class User(models.Model):
     userName = models.TextField(max_length=20, null=True, blank=True)
     phoneNumber = models.TextField(null=True, blank=True)
     address = models.TextField(max_length=100, null=True, blank=True)
+    location = models.TextField(max_length=100, null=True, blank=True)
     total = models.TextField(null=True, blank=True)
     comment = models.TextField(max_length = 300, blank=True, null=True)
     time = models.DateTimeField(auto_now_add=True, )
