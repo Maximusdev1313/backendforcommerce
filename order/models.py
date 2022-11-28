@@ -7,6 +7,7 @@ from django.utils import timezone
 # Create your models here.
 
 class User(models.Model):
+    ip_address = models.CharField(blank=True, null=True, max_length=50)
     userName = models.TextField(max_length=20, null=True, blank=True)
     phoneNumber = models.TextField(null=True, blank=True)
     address = models.TextField(max_length=100, null=True, blank=True)

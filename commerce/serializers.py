@@ -11,7 +11,7 @@ class ProductSerializer(serializers.ModelSerializer):
     rasmlari = ProductRasmiSerializer(many= True, read_only=True)
     class Meta: 
         model = Product
-        fields = ['id', 'nomi', 'kilogramm', 'litri', 'soni', 'narx', 'chegirma_narx', 'chegirma_foizi','time',  'mahsulot', 'rasmlari']
+        fields = ['id', 'nomi', 'kilogramm', 'litri', 'soni', 'narx', 'eski_narx', 'chegirma_foizi', 'kerakli' ,'time',  'mahsulot', 'rasmlari']
     def __str__(self):
         return self.nomi
 
